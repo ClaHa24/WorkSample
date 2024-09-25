@@ -16,6 +16,8 @@ jobs:
           dotnet-version: '8.0'
       - name: Dependencies
         run: task dependencies
+      - name: Build
+        run: task build
       - name: Test
         run: task test
       - name: Coverage
