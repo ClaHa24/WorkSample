@@ -8,11 +8,11 @@ tasks:
   test:
     desc: Running the tests
     cmds:
-      - dotnet test --no-build --verbosity normal
+      - dotnet test --no-build --verbosity normal /p:EnableWindowsTargeting=true
   coverage:
     desc: Generating coverage report(s)
     cmds:
-      - dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
+      - dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage /p:EnableWindowsTargeting=true
   build:
     desc: Building the project
     cmds:
