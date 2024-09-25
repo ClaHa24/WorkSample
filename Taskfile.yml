@@ -4,15 +4,15 @@ tasks:
   dependencies:
     desc: Installing the dependencies
     cmds:
-      - dotnet restore /p:EnableWindowsTargeting=true
+      - dotnet restore
   test:
     desc: Running the tests
     cmds:
-      - dotnet test --no-build --verbosity normal /p:EnableWindowsTargeting=true
+      - dotnet test --no-build --verbosity normal
   coverage:
     desc: Generating coverage report(s)
     cmds:
-      - dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage /p:EnableWindowsTargeting=true
+      - dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
   build:
     desc: Building the project
     cmds:
