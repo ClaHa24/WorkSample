@@ -4,7 +4,7 @@ tasks:
   dependencies:
     desc: Installing the dependencies
     cmds:
-      - dotnet restore
+      - dotnet restore /p:EnableWindowsTargeting=true
   test:
     desc: Running the tests
     cmds:
