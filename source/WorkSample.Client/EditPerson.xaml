@@ -1,0 +1,30 @@
+﻿<Window x:Class="WorkSample.Client.EditPerson"
+        x:Name="EditPersonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkSample.Client"
+        xmlns:vm="clr-namespace:WorkSample.Client.ViewModels"
+        mc:Ignorable="d"
+        Title="Create or update person" Height="300" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Name:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding Path=Person.Name}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+        <Label Content="Surname:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding Path=Person.Surname}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="Ok" Command="{Binding OkCommand}" CommandParameter="{Binding ElementName=EditPersonWindow}" Margin="10" Padding="10"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Cancel" Command="{Binding CancelCommand}" CommandParameter="{Binding ElementName=EditPersonWindow}" Margin="10" Padding="10"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding ErrorMessage}" Foreground="Red" TextWrapping="Wrap" />
+    </Grid>
+</Window>
