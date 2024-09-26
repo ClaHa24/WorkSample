@@ -12,7 +12,7 @@ tasks:
   coverage:
     desc: Generating coverage report(s)
     cmds:
-      - dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage /p:EnableWindowsTargeting=true
+      - dotnet test test/WorkSample.Application.UnitTests/WorkSample.Application.UnitTests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage /p:EnableWindowsTargeting=true
   build:
     desc: Building the project
     cmds:
