@@ -43,7 +43,7 @@ public class CreatePersonCommandHandlerTests
         // Assert
         var createdEntry = await _personInMemoryRepository.PersonRepository.GetByIdAsync(id);
         createdEntry.Should().NotBeNull();
-        createdEntry.Name.Should().Be(command.Name);
-        createdEntry.Surname.Should().Be(command.Surname);
+        createdEntry?.Name.Should().Be(command.Name);
+        createdEntry?.Surname.Should().Be(command.Surname);
     }
 }
