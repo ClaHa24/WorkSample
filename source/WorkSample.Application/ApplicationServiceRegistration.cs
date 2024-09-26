@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace WorkSample.Application;
@@ -6,6 +7,7 @@ namespace WorkSample.Application;
 /// <summary>
 ///     Contains service registration for application layer.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static class ApplicationServiceRegistration
 {
     /// <summary>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Diagnostics.CodeAnalysis;
 using WorkSample.Domain;
 
 namespace WorkSample.Persistence.Configurations;
@@ -7,6 +8,7 @@ namespace WorkSample.Persistence.Configurations;
 /// <summary>
 ///     Configuration for entity type <see cref="Person"/>.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public class PersonConfiguration : IEntityTypeConfiguration<Person>
 {
     /// <summary>

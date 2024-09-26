@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 using WorkSample.Application.Contracts.Logging;
 using WorkSample.Infrastructure.Logging;
 
@@ -7,6 +8,7 @@ namespace WorkSample.Infrastructure;
 /// <summary>
 ///     Contains service registration for infrastructure layer.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static class InfrastructureServicesRegistration
 {
     /// <summary>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 using WorkSample.Application.Contracts.Persistence;
 using WorkSample.Persistence.DatabaseContext;
 using WorkSample.Persistence.Repositories;
@@ -10,6 +11,7 @@ namespace WorkSample.Persistence;
 /// <summary>
 ///     Contains service registration for persistence layer.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static class PersistenceServiceRegistration
 {
     /// <summary>

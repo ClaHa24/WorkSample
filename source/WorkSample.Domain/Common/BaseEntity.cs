@@ -1,8 +1,11 @@
-﻿namespace WorkSample.Domain.Common;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace WorkSample.Domain.Common;
 
 /// <summary>
 ///     Base class for entities.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public abstract class BaseEntity
 {
     /// <summary>

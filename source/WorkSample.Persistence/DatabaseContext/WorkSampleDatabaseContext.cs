@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 using WorkSample.Domain;
 using WorkSample.Domain.Common;
 
@@ -7,6 +8,7 @@ namespace WorkSample.Persistence.DatabaseContext;
 /// <summary>
 ///     Database context for the application.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public class WorkSampleDatabaseContext : DbContext
 {
     /// <summary>

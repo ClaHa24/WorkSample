@@ -30,5 +30,6 @@ tasks:
   run:
     desc: Running everything
     cmds:
+      - task: build       
       - task: run-backend
       - task: run-frontend

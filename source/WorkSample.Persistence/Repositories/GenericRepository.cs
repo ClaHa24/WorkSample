@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 using WorkSample.Application.Contracts.Logging;
 using WorkSample.Application.Contracts.Persistence;
 using WorkSample.Domain.Common;
@@ -10,6 +11,7 @@ namespace WorkSample.Persistence.Repositories;
 ///     Generic repository containing common methods.
 /// </summary>
 /// <typeparam name="T">Type of the repository.</typeparam>
+[ExcludeFromCodeCoverage]
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
     protected readonly WorkSampleDatabaseContext _context;

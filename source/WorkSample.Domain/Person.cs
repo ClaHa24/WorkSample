@@ -1,10 +1,12 @@
-﻿using WorkSample.Domain.Common;
+﻿using System.Diagnostics.CodeAnalysis;
+using WorkSample.Domain.Common;
 
 namespace WorkSample.Domain;
 
 /// <summary>
 ///     Entity representing a person.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public class Person : BaseEntity
 {
     /// <summary>

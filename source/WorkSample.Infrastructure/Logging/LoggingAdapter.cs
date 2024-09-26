@@ -1,8 +1,14 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 using WorkSample.Application.Contracts.Logging;
 
 namespace WorkSample.Infrastructure.Logging;
 
+/// <summary>
+///     Logging adapter for <see cref="ILogger{T}"/>.
+/// </summary>
+/// <typeparam name="T">Type to log for.</typeparam>
+[ExcludeFromCodeCoverage]
 public class LoggingAdapter<T> : IAppLogger<T>
 {
     private readonly ILogger<T> _logger;
